@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Imagenes/R.png" class="Logo">
+    <title>Andres Yance Personal Portafolio </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Imagenes/R.png" alt="logo"  style="width: 150px; height: auto;" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Sciencist </p>
+            <h1>Hi, I'm <span>Andres<br>Yance, </span> What's Up</h1>
+        </div>
+    </div>
+</div>
+<!---------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Imagenes/WEBLIB_H_USER.ISCRIPT1.FieldFormula.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi there! My name is Andres Yance and I'm originally from Colombia. I pursued my passion for technology and innovation by majoring in Computer Science with an emphasis in Supply Chain Management.
+                I had the incredible opportunity to attend the University of Wisconsin-Platteville, where I not only focused on my academic pursuits but also honed my skills as a baseball player. As a pitcher, 
+                I had the privilege of representing my university's baseball team for four memorable years.
+                My time on the field taught me the importance of teamwork, discipline, and perseverance.</p>
+              
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>              
+                </div>
+                <div class="tab-contents active-tab" id="Skills"> 
+                    <ul>
+                        <li><span>Computer Sciencist</span><br>Development of Web/App interfaces</li>
+                        <li><span>Database Developing</span><br>SQL, PSQL, pdAdmid, mongoDB</li>
+                        <li><span>Programing Lenguages</span><br>Pyhton, Java, C++, HTML, CSS, Javascript.</li>
+                       
+                </ul>
+                
+                </div> <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2021-2022</span><br>Assambly Tech at Kondex Corp</li>
+                        <li><span>2020-22020</span><br>General Labor at Neenah Foundry</li>
+                    </ul>
+            </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                         <li><span>2024 From University of Wisconsin-Platteville</span><br>Bachelor of Computer Science & Supply Chain</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="languages-icons">
+                <img src="Imagenes/icons8-python-48.png" alt="Python" title="Python">
+                <img src="Imagenes/java_icon.png" alt="Java" title="Java">
+                <img src="Imagenes/c++_icon.png" alt="C++" title="C++">
+                <img src="Imagenes/javascript_icon.png" alt="JavaScript" title="JavaScript">
+                <img src="Imagenes/icons8-html-64.png" alt="html" title="html">
+                <img src="Imagenes/icons8-css-48.png" alt="css" title="css">
+                <img src="Imagenes/sql_icon2.png" alt="SLQ" title="SQL">
+            
+                
+                
+            </div>
+
+        </div>   
+     </div>
+</div>
+<!---------Personal projects------>
+<div id="Portfolio">
+    <div class="container">
+      <h1 class="sub-title-about">Personal Projects</h1>
+      <div id="project-swiper" class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="Imagenes/library_App1.png" alt="Project 1">
+            <img src="Imagenes/library_App2.png" alt="Project 1">
+            <div class="project-description">
+              <h3>Project 1 - Library database management system</h3>
+              <p>The project is designed as a basic library database management system. 
+                The program has two different views: an admin view and a general user view. 
+                In the Admin view, users can search, add, and remove users from the system, 
+                search, add, and remove books from the system, and view checkouts. 
+                In the general user view, users can search for books by different attributes 
+                such as title, ISBN, author, and genre, and checkout books. 
+                The application runs via a desktop application and is connected to an SQL database 
+                where all the information is stored.</p>
+            </div>
+           
+
+          </div>
+          <div class="swiper-slide">
+            <img src="Imagenes/fighting_game1.png" alt="Project 2">
+            <img src="Imagenes/fighting_game2.png" alt="Project 2">
+            <div class="project-description">
+              <h3>Project 2 - Fighting Game</h3>
+              <p>This program is a prototype of a turn-based fighting game. 
+                It allows the player to engage in exciting battles with various opponents. 
+                One of the key features is the ability to adjust the game's difficulty level, 
+                providing options for both casual and experienced players. Additionally, players 
+                can choose their character from a diverse roster, each with unique abilities and playstyles. 
+                The game also includes a challenging AI-controlled enemy that can be customized with different 
+                difficulty settings. Moreover, players have the freedom to change the background scenes, enhancing 
+                the visual experience of the battles. To further enhance gameplay, the prototype includes an in-game 
+                store where players can purchase super potions and other power-ups, adding strategic elements to the fights. 
+                Overall, this prototype showcases the potential for an immersive and engaging turn-based fighting game experience.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="Imagenes/Nasapp_1.png" alt="Project 3">
+            <img src="Imagenes/Nasapp_2.png" alt="Project 3">
+            <div class="project-description">
+              <h3>Project 3 - Mars Explorer</h3>
+              <p>This website uses an API from NASA to get firsthand images from their rovers 
+                as well as information about their camera view name, rovers name, status, 
+                landing and launching dates.</p>
+            
+            </div>
+          </div>
+        </div>
+<div style = "margin-bottom: -156%; "class="swiper-pagination"></div>
+      </div>
+    </div>
+</div>
+<script src="script.js"></script>
+  
+</body>
+</html>
