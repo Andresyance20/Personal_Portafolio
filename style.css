@@ -10,6 +10,13 @@
     color: #fff;
   }
   
+  #warning-banner {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+  
   #header {
     width: 100%;
     height: 100vh;
