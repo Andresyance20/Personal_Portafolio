@@ -1,157 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Imagenes/R.png" class="Logo">
-    <title>Andres Yance Personal Portafolio </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Andres D. Yance | Software Service Engineer</title>
+    <meta name="description" content="Andres D. Yance is a Software Service Engineer combining software engineering with industrial automation, optical technology and international field support.">
+    <meta name="theme-color" content="#080808">
+    <meta property="og:title" content="Andres D. Yance | Software Service Engineer">
+    <meta property="og:description" content="Software engineering meets industrial automation: machine integration, troubleshooting and international field support.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="Imagenes/R.png">
 
+    <!-- Lets CSS know JavaScript is available (used for scroll animations) -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Content and colors load first so the theme is applied before the page is drawn -->
+    <script src="content.js"></script>
+    <script src="theme.js"></script>
+    <script src="tools-art.js"></script>
 </head>
 <body>
-    <div id="warning-banner">
-        ⚠️ Please note: This information is not up-to-date.
-    </div>
 
-    
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="Imagenes/R.png" alt="logo"  style="width: 150px; height: auto;" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <p>Computer Sciencist </p>
-            <h1>Hi, I'm <span>Andres<br>Yance, </span> What's Up</h1>
+<a class="skip-link" href="#about">Skip to content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="navbar" class="navbar" aria-label="Main navigation">
+    <div class="container nav-inner">
+        <a href="#home" class="nav-logo" aria-label="Back to top">
+            <img src="Imagenes/R.png" alt="Andres Yance logo">
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#machines" class="nav-link">Machines</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="home" class="hero">
+    <div class="hero-media" aria-hidden="true">
+        <video class="hero-video is-active" muted playsinline preload="metadata" tabindex="-1" disablepictureinpicture></video>
+        <video class="hero-video" muted playsinline preload="none" tabindex="-1" disablepictureinpicture></video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <p class="hero-eyebrow"><span>Andres D. Yance</span> <i></i> <span>Software Service Engineer</span></p>
+        <h1>Where software meets <span class="accent">industrial automation</span></h1>
+        <p class="hero-lead">Combining software engineering knowledge with hands-on experience in industrial automation, and international technical support to solve complex engineering challenges.</p>
+        <p class="hero-typed">I work with <span id="typed" class="typed-text"></span><span class="cursor" aria-hidden="true">|</span></p>
+
+        <div class="hero-buttons">
+            <a href="#experience" class="btn btn-primary">See my experience</a>
+            <a href="#in-action" class="btn btn-outline"><i class="fas fa-play"></i> Watch machines run</a>
+        </div>
+
+        <div class="social-links">
+            <a id="link-linkedin" href="https://www.linkedin.com/in/andres-yance-788077220/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a id="link-github" href="https://github.com/Andresyance20" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a id="link-gitlab" href="https://gitlab.com/yancea" target="_blank" rel="noopener" aria-label="GitLab"><i class="fab fa-gitlab"></i></a>
+            <a id="link-email" href="mailto:Davidyance20@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
-</div>
+    <div id="hero-scene" class="hero-scene" hidden>
+        <span class="scene-label"><i class="fas fa-cog"></i> <span id="scene-label"></span></span>
+        <span id="scene-dots" class="scene-dots"></span>
+        <button id="scene-pause" class="scene-pause" type="button" aria-label="Pause background video"><i class="fas fa-pause"></i></button>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section"><i class="fas fa-chevron-down"></i></a>
+</header>
 
-<!---------link to git---------->
-<div class="social-links">
-    <a href="https://gitlab.com/yancea" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
-    <a href="https://github.com/Andresyance20" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-</div>
-<!---------about---------->
-<div id="about">
+<main>
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="Imagenes/WEBLIB_H_USER.ISCRIPT1.FieldFormula.jpg" alt="">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hi there! My name is Andres Yance and I'm originally from Colombia. I pursued my passion for technology and innovation by majoring in Computer Science with an emphasis in Supply Chain Management.
-                I had the incredible opportunity to attend the University of Wisconsin-Platteville, where I not only focused on my academic pursuits but also honed my skills as a baseball player. As a pitcher, 
-                I had the privilege of representing my university's baseball team for four memorable years.
-                My time on the field taught me the importance of teamwork, discipline, and perseverance.</p>
-              
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links"onclick="opentab('Education')">Education</p>              
-                </div>
-                <div class="tab-contents active-tab" id="Skills"> 
-                    <ul>
-                        <li><span>Computer Sciencist</span><br>Development of Web/App interfaces</li>
-                        <li><span>Database Developing</span><br>SQL, PSQL, pdAdmid, mongoDB</li>
-                        <li><span>Programing Lenguages</span><br>Pyhton, Java, C++, HTML, CSS, Javascript.</li>
-                       
+        <div class="about-grid">
+            <figure class="about-photo reveal">
+                <img src="media/profile/me-working-on-machine.jpg" alt="Andres working on a NeoMapper machine while colleagues look on">
+                <figcaption><i class="fas fa-wrench"></i> Hands-on with a NeoMapper</figcaption>
+            </figure>
+
+            <div class="about-text reveal">
+                <p class="eyebrow">About me</p>
+                <h2 class="section-title">More than a <span class="accent">developer</span>, more than a technician</h2>
+                <p>
+                    I'm a Software Service Engineer with a B.S. in Computer Science from the
+                    University of Wisconsin&ndash;Platteville. My work sits where software meets physical engineering systems:
+                    industrial automation, optical technology, machine integration and international technical support.
+                </p>
+                <p>
+                    I specialize in supporting, installing, configuring, troubleshooting and upgrading software-driven industrial
+                    optical measurement and manufacturing systems, integrating software, hardware, databases, industrial
+                    communication protocols and machine control systems.
+                </p>
+                <p>
+                    I support customers across North America, South America and Europe through remote troubleshooting, on-site
+                    installations, commissioning, software upgrades and training. I enjoy solving complex technical problems and
+                    learning new technologies.
+                </p>
+
+                <ul class="pills" aria-label="Professional focus">
+                    <li>Software engineering</li>
+                    <li>Industrial automation</li>
+                    <li>Optical technology</li>
+                    <li>Machine integration</li>
+                    <li>Technical support and troubleshooting</li>
+                    <li>International field engineering</li>
+                    <li>Software and hardware integration</li>
                 </ul>
-                
-                </div> <div class="tab-contents" id="Experience">
-                    <ul>
-                        <li><span>2021-2022</span><br>Assambly Tech at Kondex Corp</li>
-                        <li><span>2020-2020</span><br>General Labor at Neenah Foundry</li>
-                    </ul>
-            </div>
-                <div class="tab-contents" id="Education">
-                    <ul>
-                         <li><span>2024 From University of Wisconsin-Platteville</span><br>Bachelor of Computer Science & Supply Chain</li>
-                    </ul>
+
+                <div class="stats">
+                    <div class="stat"><span class="stat-number" data-count="10">0</span><span class="stat-label">Countries visited</span></div>
+                    <div class="stat"><span class="stat-number" data-count="3">0</span><span class="stat-label">Continents supported</span></div>
+                    <div class="stat"><span class="stat-number" data-count="6">0</span><span class="stat-label">Machines in one deployment</span></div>
                 </div>
-            </div>
-            <div class="languages-icons">
-                <img src="Imagenes/icons8-python-48.png" alt="Python" title="Python">
-                <img src="Imagenes/java_icon.png" alt="Java" title="Java">
-                <img src="Imagenes/c++_icon.png" alt="C++" title="C++">
-                <img src="Imagenes/javascript_icon.png" alt="JavaScript" title="JavaScript">
-                <img src="Imagenes/icons8-html-64.png" alt="html" title="html">
-                <img src="Imagenes/icons8-css-48.png" alt="css" title="css">
-                <img src="Imagenes/sql_icon2.png" alt="SLQ" title="SQL">
-            
-                
-                
-            </div>
 
-        </div>   
-     </div>
-</div>
-<!---------Personal projects------>
-<div id="Portfolio">
-    <div class="container">
-      <h1 class="sub-title-about">Personal Projects</h1>
-      <div id="project-swiper" class="swiper-container">
-        <div class="swiper-wrapper">
+                <div class="countries">
+                    <h3><i class="fas fa-globe-americas"></i> Ten countries so far</h3>
+                    <ul id="country-groups" class="country-groups"></ul>
+                </div>
 
-          <div class="swiper-slide">
-            <img src="Imagenes/library_App1.png" alt="Project 1">
-            <img src="Imagenes/library_App2.png" alt="Project 1">
-            <div class="project-description">
-              <h3>Project 1 - Library database management system</h3>
-              <p>The project is designed as a basic library database management system. 
-                The program has two different views: an admin view and a general user view. 
-                In the Admin view, users can search, add, and remove users from the system, 
-                search, add, and remove books from the system, and view checkouts. 
-                In the general user view, users can search for books by different attributes 
-                such as title, ISBN, author, and genre, and checkout books. 
-                The application runs via a desktop application and is connected to an SQL database 
-                where all the information is stored.</p>
+                <p class="interests"><i class="fas fa-heart"></i>
+                    Outside of work: technology and software, engineering and automation, travel and other cultures,
+                    weightlifting and cardio, and learning new skills.
+                </p>
             </div>
-           
-
-          </div>
-          <div class="swiper-slide">
-            <img src="Imagenes/fighting_game1.png" alt="Project 2">
-            <img src="Imagenes/fighting_game2.png" alt="Project 2">
-            <div class="project-description">
-              <h3>Project 2 - Fighting Game</h3>
-              <p>This program is a prototype of a turn-based fighting game. 
-                It allows the player to engage in exciting battles with various opponents. 
-                One of the key features is the ability to adjust the game's difficulty level, 
-                providing options for both casual and experienced players. Additionally, players 
-                can choose their character from a diverse roster, each with unique abilities and playstyles. 
-                The game also includes a challenging AI-controlled enemy that can be customized with different 
-                difficulty settings. Moreover, players have the freedom to change the background scenes, enhancing 
-                the visual experience of the battles. To further enhance gameplay, the prototype includes an in-game 
-                store where players can purchase super potions and other power-ups, adding strategic elements to the fights. 
-                Overall, this prototype showcases the potential for an immersive and engaging turn-based fighting game experience.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="Imagenes/Nasapp_1.png" alt="Project 3">
-            <img src="Imagenes/Nasapp_2.png" alt="Project 3">
-            <div class="project-description">
-              <h3>Project 3 - Mars Explorer</h3>
-              <p>This website uses an API from NASA to get firsthand images from their rovers 
-                as well as information about their camera view name, rovers name, status, 
-                landing and launching dates.</p>
-            
-            </div>
-          </div>
         </div>
-<div style = "margin-bottom: -156%; "class="swiper-pagination"></div>
-      </div>
+    </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section section-alt">
+    <div class="container">
+        <p class="eyebrow reveal">Experience</p>
+        <h2 class="section-title reveal">Career <span class="accent">timeline</span></h2>
+
+        <div class="timeline reveal">
+            <article class="t-item">
+                <span class="t-dot" aria-hidden="true"><i class="fas fa-industry"></i></span>
+                <div class="t-card">
+                    <p class="t-date">Aug 20, 2024 &ndash; Present</p>
+                    <h3>Software Service Engineer</h3>
+                    <p class="t-org">A&amp;R Optical Machinery, Inc. &middot; Brookfield, Wisconsin</p>
+                    <p class="t-text">
+                        I support specialized optical manufacturing and measurement equipment used in the optical industry, from
+                        installation and commissioning to software upgrades, remote and on-site troubleshooting, and operator training.
+                    </p>
+
+                    <h4>What I do</h4>
+                    <ul class="check-list">
+                        <li>Install and commission industrial optical equipment</li>
+                        <li>Configure machine software and control applications</li>
+                        <li>Perform software upgrades and system maintenance</li>
+                        <li>Troubleshoot software, hardware and communication issues</li>
+                        <li>Support machine integration with external systems</li>
+                        <li>Configure databases, networking and communication interfaces</li>
+                        <li>Support production environments remotely and on-site</li>
+                        <li>Train operators and technical personnel</li>
+                        <li>Collaborate with engineering teams on complex problems</li>
+                        <li>Support international customers across different facilities</li>
+                        <li>Assist with production monitoring, data collection and KPI integration</li>
+                        <li>Verify equipment against specifications and calibration requirements</li>
+                    </ul>
+
+                    <h4>Where the problems live</h4>
+                    <ul class="chips">
+                        <li>Database connectivity</li>
+                        <li>TCP/IP communication</li>
+                        <li>Network configuration</li>
+                        <li>Machine software interfaces</li>
+                        <li>Data exchange between industrial systems</li>
+                        <li>External optical measurement platforms</li>
+                        <li>XML-based integrations</li>
+                        <li>Software compatibility and version management</li>
+                    </ul>
+                    <a class="t-link" href="#projects">See related projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="t-item">
+                <span class="t-dot" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <div class="t-card">
+                    <p class="t-date">Graduated May 17, 2024</p>
+                    <h3>B.S. in Computer Science</h3>
+                    <p class="t-org">University of Wisconsin&ndash;Platteville &middot; Minor in Supply Chain Management</p>
+                    <p class="t-text">
+                        A foundation in software development, programming, databases, computer systems and problem-solving, now
+                        applied to real industrial environments that combine software engineering with automation, machine
+                        integration and optical technology.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MACHINES ============ -->
+<section id="machines" class="section">
+    <div class="container">
+        <p class="eyebrow reveal">Hands-on equipment</p>
+        <h2 class="section-title reveal">Machines &amp; <span class="accent">systems</span></h2>
+        <p class="section-intro reveal">
+            The industrial optical platforms I support, described at a general level. No proprietary configurations or customer
+            information are published here.
+        </p>
+
+        <div id="machine-grid" class="machine-grid reveal"></div>
+
+        <div class="other-systems reveal">
+            <h3>Also exposure to</h3>
+            <ul id="other-systems" class="chips"></ul>
+        </div>
+
+        <!-- Videos and photos -->
+        <div id="in-action" class="in-action">
+            <div class="in-action-head reveal">
+                <div>
+                    <p class="eyebrow">Gallery</p>
+                    <h3 class="subsection-title">In <span class="accent">action</span></h3>
+                </div>
+                <div id="gallery-filters" class="filters" role="group" aria-label="Filter gallery"></div>
+            </div>
+            <div id="gallery-grid" class="media-grid reveal"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section section-alt">
+    <div class="container">
+        <p class="eyebrow reveal">Projects &amp; achievements</p>
+        <h2 class="section-title reveal">Selected <span class="accent">work</span></h2>
+        <p class="section-intro reveal">Open any project for the full description.</p>
+
+        <div id="filters" class="filters reveal" role="group" aria-label="Filter projects"></div>
+        <div id="project-grid" class="project-grid"></div>
+    </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section">
+    <div class="container">
+        <p class="eyebrow reveal">Technical skills</p>
+        <h2 class="section-title reveal">What I <span class="accent">work with</span></h2>
+        <ul class="skill-legend reveal">
+            <li><span class="dot core"></span> Core: used in my day-to-day work</li>
+            <li><span class="dot growing"></span> Growing: building depth</li>
+        </ul>
+        <div id="skill-grid" class="skill-grid reveal"></div>
+
+        <div class="tools-block">
+            <div class="reveal">
+                <p class="eyebrow">Tools I use</p>
+                <h3 class="subsection-title">My <span class="accent">toolbox</span></h3>
+            </div>
+            <div id="tool-grid" class="tool-grid reveal"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section-alt">
+    <div class="container">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="section-title reveal">Let's <span class="accent">connect</span></h2>
+        <p class="section-intro reveal">Open to engineering opportunities, professional networking and conversations about software and industrial automation.</p>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <p><i class="fas fa-envelope"></i> <a id="contact-email" href="mailto:Davidyance20@gmail.com">Davidyance20@gmail.com</a></p>
+                <p><i class="fab fa-linkedin-in"></i> <a id="contact-linkedin" href="https://www.linkedin.com/in/andres-yance-788077220/" target="_blank" rel="noopener">LinkedIn profile</a></p>
+                <p><i class="fab fa-github"></i> <a id="contact-github" href="https://github.com/Andresyance20" target="_blank" rel="noopener">github.com/Andresyance20</a></p>
+                <p><i class="fab fa-gitlab"></i> <a id="contact-gitlab" href="https://gitlab.com/yancea" target="_blank" rel="noopener">gitlab.com/yancea</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="contact-location">Wisconsin, United States</span></p>
+                <div id="resume-slot"></div>
+            </div>
+
+            <form id="contact-form" class="contact-form reveal" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Andres D. Yance &middot; Software Service Engineer &middot; Wisconsin, USA</p>
+</footer>
+
+<button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ============ VIEWER / PROJECT MODAL ============ -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+        <button class="modal-close" data-close aria-label="Close"><i class="fas fa-times"></i></button>
+
+        <div class="modal-gallery">
+            <button id="modal-prev" class="gallery-arrow prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div id="modal-stage" class="modal-stage"></div>
+            <button id="modal-next" class="gallery-arrow next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <span id="modal-counter" class="gallery-counter"></span>
+        </div>
+        <div id="modal-thumbs" class="modal-thumbs"></div>
+
+        <div class="modal-info">
+            <h3 id="modal-title"></h3>
+            <div id="modal-tags" class="tags"></div>
+            <p id="modal-description"></p>
+            <div id="modal-links" class="modal-links"></div>
+        </div>
     </div>
 </div>
+
+<noscript><p class="noscript">Please enable JavaScript to see the machines, gallery and projects.</p></noscript>
+
 <script src="script.js"></script>
-  
 </body>
 </html>

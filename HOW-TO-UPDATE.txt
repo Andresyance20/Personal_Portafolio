@@ -1,0 +1,36 @@
+HOW TO UPDATE YOUR PORTFOLIO
+============================
+Open content.js in any text editor. Everything you see on the site is there:
+text, links, machines, skills, projects, tools, gallery and the hero videos.
+Save, then refresh the page in your browser.
+
+ADD A PHOTO OR VIDEO TO THE GALLERY
+ 1. Put the file in media/machines (photos) or media/videos (videos).
+ 2. In content.js, copy one block inside GALLERY, paste it below, change the path and text.
+    Videos: type "video" with a "poster" image.  YouTube: type "youtube" and the id after v= in the link.
+
+CHANGE THE ROTATING BACKGROUND
+ In content.js see heroScenes. Each line is one machine video. Add, remove or reorder.
+
+CHANGE THE COLORS (one setting)
+ In content.js find THEME and change preset to one of:
+   "maroon" (original), "electric-blue", "cyan", "emerald", "violet", "orange", "crimson"
+ Save and refresh. Buttons, text, glows, cards and the tool illustrations all follow it.
+ Your own color: set preset to "custom" and edit the three colors under custom
+   (dark = fills, mid = hover, accent = light text color).
+ Quick preview with no editing: add ?theme=electric-blue to the end of the page address.
+ Note: your logo file (Imagenes/R.png) keeps its own colors. Recolor it separately if you want it to match.
+
+USE YOUR OWN PICTURES IN "TOOLS I USE"
+ Put a picture in media/tools and set image: "media/tools/your-file.jpg" for that tool in content.js (TOOLS).
+ If image is empty, the built-in illustration is shown. The built-in drawings are original illustrations
+ made for this site (not AI-generated) and they follow your theme colors.
+
+ADD A PROJECT
+ Copy a block inside PROJECTS in content.js. Use type "Professional" or "Software".
+
+KEEP YOUR EXISTING "Imagenes" FOLDER NEXT TO index.html
+ The logo, language icons and the old project screenshots still come from it.
+
+Only publish photos and videos approved for public sharing (no customer names, serial numbers,
+proprietary software screens or internal configurations).
