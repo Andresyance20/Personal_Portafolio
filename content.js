@@ -38,10 +38,13 @@ const SITE = {
 
   // Phrases typed after "I work with ..."
   typed: [
-    "optical measurement systems",
-    "machine integration and commissioning",
-    "databases, networks and industrial protocols",
-    "customers on three continents"
+    "industrial automation",
+    "optical engineering systems",
+    "software and hardware integration",
+    "machine commissioning and controls",
+    "industrial networks and protocols",
+    "precision measurement technology",
+    "global engineering operations"
   ]
 };
 

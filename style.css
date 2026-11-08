@@ -40,6 +40,49 @@ button { font-family: inherit; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 .accent { color: var(--accent); }
 
+/* Futuristic gradient title */
+.title-glow {
+    background: linear-gradient(
+        90deg,
+        #20c5e8,
+        #ffffff,
+        #168cff,
+        #20c5e8
+    );
+
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 5s ease infinite;
+
+    filter: drop-shadow(0 0 8px rgba(32, 197, 232, 0.25));
+}
+
+/* Animated gradient movement */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .title-glow {
+        animation: none;
+        background-position: center;
+    }
+}
+
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .skip-link {
