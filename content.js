@@ -218,7 +218,7 @@ const GALLERY = [
 
 /* ---------------------------------------------------------------------
    SKILLS
-   level: "core"    -> solid dot  (used in my day-to-day work)
+   level: "growing"    -> solid dot  (used in my day-to-day work)
    level: "growing" -> hollow dot (building depth)
    Change a skill's level by changing that one word.
    --------------------------------------------------------------------- */
@@ -226,46 +226,48 @@ const SKILLS = [
   {
     title: "Programming and software development", icon: "fa-code",
     items: [
-      ["Java", "growing"], ["Python", "growing"], ["JavaScript", "growing"],
-      ["HTML", "growing"], ["CSS", "growing"], ["SQL", "core"], ["REST APIs", "growing"]
+      ["Java", "growing"], ["Python", "growing"], ["JavaScript", "growing"],["Node.js", "growing"],["C/C++", "growing"],
+      ["HTML", "growing"], ["CSS", "growing"], ["SQL", "growing"], ["REST APIs", "growing"]
     ]
   },
   {
     title: "Database and data management", icon: "fa-database",
     items: [
-      ["PostgreSQL", "core"], ["pgAdmin", "core"], ["Database troubleshooting", "core"],
-      ["Data integration", "core"], ["Production data management", "core"]
+      ["PostgreSQL", "growing"], ["Sql Server", "growing"], ["Relational Database", "growing"],
+      ["Data integration", "growing"], ["Microsoft Azure Cloud", "growing"]
     ]
   },
   {
     title: "Industrial automation", icon: "fa-cogs",
     items: [
-      ["PLC systems", "core"], ["HMI systems", "core"], ["TwinCAT 2 and 3", "core"],
-      ["Industrial machine integration", "core"], ["Sensor integration", "core"],
-      ["Machine commissioning", "core"], ["Industrial control systems", "core"]
+      ["PLC/HMI/SCADA", "growing"],    ["Beckhoff TwinCAT 2 and 3", "growing"],
+    ["Ladder Diagram (LAD)", "growing"],
+    ["Function Block Diagram (FBD)", "growing"],
+    ["Structured Text (ST)", "growing"], 
+      ["Machine commissioning", "growing"], ["Industrial control systems", "growing"]
     ]
   },
   {
     title: "Networking and communication", icon: "fa-network-wired",
     items: [
-      ["TCP/IP", "core"], ["DNS", "core"], ["Static IP configuration", "core"],
-      ["Ethernet networking", "core"], ["Remote connectivity", "core"],
-      ["Industrial communication troubleshooting", "core"]
+      ["Ethernet TCP/IP", "growing"], ["Modbus TPC", "growing"], ["PROFINET", "growing"],
+    ["Remote connectivity", "growing"],
+      ["Industrial communication troubleshooting", "growing"]
     ]
   },
   {
     title: "Data analytics and monitoring", icon: "fa-chart-line",
     items: [
-      ["Microsoft Power BI", "core"], ["KPI monitoring", "core"],
-      ["IoT connectivity", "core"], ["Production data collection", "core"]
+      ["Microsoft Power BI", "growing"], ["KPI monitoring", "growing"],  ["Machine IoT connectivity", "growing"],
+      ["Production data collection", "growing"],  ["Azure IoT connectivity", "growing"]
     ]
   },
   {
     title: "Engineering and support tools", icon: "fa-tools",
     items: [
-      ["Visual Studio", "core"], ["Git", "core"], ["VNC", "core"], ["ConnectWise", "core"],
-      ["Windows", "core"], ["XML configuration and integration", "core"],
-      ["Machine calibration and verification", "core"]
+      ["MES Software", "growing"] ,["Visual Studio", "growing"], ["Git", "growing"], ["VNC", "growing"], ["ConnectWise", "growing"],
+      ["Windows", "growing"], ["XML configuration and integration", "growing"],
+      ["Machine calibration and verification", "growing"]
     ]
   }
 ];
